@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package tk.cofedream.example.proguard;
+package tk.cofedream.example.base.proguard;
 
 /**
  * @author : cofe

@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2021 cofe
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -25,7 +41,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>tk.cofedream.example.proguard.HelloProguard</mainClass>
+                            <mainClass>tk.cofedream.example.base.proguard.HelloProguard</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -35,7 +51,7 @@
 
     <profiles>
         <profile>
-            <id>obfuscate pom</id>
+            <id>base obfuscate pom</id>
             <build>
                 <plugins>
                     <plugin>
@@ -52,7 +68,7 @@
                         </executions>
                         <configuration>
                             <options>
-                                <option>-keep class tk.cofedream.example.proguard.HelloProguard {*;}</option>
+                                <option>-keep class tk.cofedream.example.base.proguard.HelloProguard {*;}</option>
                             </options>
                             <libs>
                                 <lib>${java.home}/lib/rt.jar</lib>
@@ -63,7 +79,7 @@
             </build>
         </profile>
         <profile>
-            <id>obfuscate cfg</id>
+            <id>base obfuscate cfg</id>
             <build>
                 <plugins>
                     <plugin>
@@ -89,7 +105,7 @@
             </build>
         </profile>
         <profile>
-            <id>obfuscate version 6.2.2</id>
+            <id>base obfuscate version 6.2.2</id>
             <build>
                 <plugins>
                     <plugin>
@@ -124,7 +140,7 @@
             </build>
         </profile>
         <profile>
-            <id>obfuscate version 7.0.1</id>
+            <id>base obfuscate version 7.0.1</id>
             <build>
                 <plugins>
                     <plugin>
