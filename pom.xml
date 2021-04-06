@@ -27,6 +27,7 @@
     <modules>
         <module>base-module</module>
         <module>multiple-module</module>
+        <module>springboot-module</module>
     </modules>
 
     <properties>
