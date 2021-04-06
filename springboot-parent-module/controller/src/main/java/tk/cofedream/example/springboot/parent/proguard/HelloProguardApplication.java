@@ -16,20 +16,17 @@
 
 package tk.cofedream.example.springboot.parent.proguard;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-
-import java.util.Objects;
+import org.springframework.context.annotation.FullyQualifiedAnnotationBeanNameGenerator;
 
 /**
  * @author : zhengrf
  * @date : 2021-04-06
  */
-@SpringBootApplication
+@SpringBootApplication(nameGenerator = FullyQualifiedAnnotationBeanNameGenerator.class)
 public class HelloProguardApplication {
     public static void main(String[] args) {
-        new SpringApplicationBuilder(HelloProguardApplication.class)
-                .beanNameGenerator((definition, registry) -> Objects.requireNonNull(definition.getBeanClassName()))
-                .run(args);
+        SpringApplication.run(HelloProguardApplication.class, args);
     }
 }
